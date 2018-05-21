@@ -1,0 +1,8 @@
+{
+  "name": "statuscope-nodejs",
+  "description": "Statuscope.io integration in Node.js",
+  "version": "1.0.0",
+  "devDependencies": {
+    "request": "*"
+  }
+}
