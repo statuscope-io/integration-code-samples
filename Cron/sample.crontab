@@ -1,0 +1,6 @@
+# Sample crontab entries
+
+# A call to backup script every hour, and heartbeat to Statuscope.io
+0    * * * * cd /root/workspace/scripts/backup/ && ./backup.sh && curl -H "Content-Type: application/json" -X POST -d '{"token":"45a586e6", "status":"OK"}' https://www.statuscope.io/tasks/fcPHcXhJahX14vvxa
+
+
