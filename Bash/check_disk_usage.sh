@@ -5,16 +5,16 @@
 disk_usage=$(df --output=pcent /home | tr -dc '0-9')
 
 if [[ disk_usage -gt 90 ]]; then
-    echo "Disk usage is more than 90%"
+    echo "Disk usage of /home has passed 90%"
     curl -H "Content-Type: application/json" \
          -X POST \
-         -d '{"token":"6e47283c2c6034d43fd70f123d63d7f2", "status":"KO", "reason": "/home is almost full"}' \
-         https://www.statuscope.io/tasks/TZ4CdJaMidAc2DshE
+         -d '{"token":"95ef3bf7", "status":"KO", "reason": "Disk usage of /home is over 90%"}' \
+         https://www.statuscope.io/tasks/qMcQax5AczvAfwcXW
 else
-    echo "Disk usage is less than 90%"
+    echo "Disk usage of /home is less than 90%"
     curl -H "Content-Type: application/json" \
          -X POST \
-         -d '{"token":"6e47283c2c6034d43fd70f123d63d7f2", "status":"OK"}' \
-         https://www.statuscope.io/tasks/TZ4CdJaMidAc2DshE
+         -d '{"token":"95ef3bf7", "status":"OK", "reason": "'"/home disk usage is at ${disk_usage}%"'"}' \
+         https://www.statuscope.io/tasks/qMcQax5AczvAfwcXW
 fi
 
