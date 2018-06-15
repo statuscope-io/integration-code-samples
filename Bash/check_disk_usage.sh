@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # A sample script that notifies Statuscope.io of available disk space in /home
+# Example cron entry: 0 * * * * cd /opt/scripts/ && ./check_disk_space.sh
 
 disk_usage=$(df --output=pcent /home | tr -dc '0-9')
 

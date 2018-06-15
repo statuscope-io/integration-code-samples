@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # A sample script that notifies Statuscope.io of current load average on a remote host
+# Example cron entry: * * * * * cd /opt/scripts/ && ./check_load_average.sh
 
 # Remote host
 USER=username
