@@ -1,7 +1,7 @@
 # A sample PowerShell script to check the status of a Windows service
 
 $ServiceName = 'OpenVPNService'
-$arrService = Get-Service -Name $ServiceName
+$Service = Get-Service -Name $ServiceName
 
 # Token is obligatory for every request
 $params = @{
@@ -9,7 +9,7 @@ $params = @{
 }
 
 # Add 'status' and 'reason' w.r.t. status of the service
-if ($arrService.Status -ne 'Running')
+if ($Service.Status -ne 'Running')
 {
     $params += @{"status"="KO";}
     $params += @{"reason"="Unknown";}
