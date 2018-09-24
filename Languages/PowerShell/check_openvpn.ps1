@@ -20,4 +20,4 @@ else
 }
 
 # Note how request body is converted to JSON on the go
-Invoke-WebRequest -Uri https://staging.statuscope.io/tasks/ZrnnL9nis4n934qqm -Method POST -Body ($params|ConvertTo-Json) -ContentType "application/json"
+Invoke-WebRequest -Uri https://www.statuscope.io/tasks/ZrnnL9nis4n934qqm -Method POST -Body ($params|ConvertTo-Json) -ContentType "application/json"
